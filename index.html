@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Techsquared.io</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <!-- outer container for the homepage -->
+  <div class="container">
+
+    <!-- header section of the homepage goes here
+    contains the navbar and featured article -->
+    <header>
+
+      <!-- nav section -->
+      <nav>
+        <div id="companyLogo">
+          <img src="TechSquared.io.svg" alt="techsquaredLogo">
+        </div>
+
+        <div id="navtabs">
+          <ul>
+            <li><a href="#featured">Featured</a></li>
+            <li><a href="#blogpostsHeader">Blogs</a></li>
+            <li><a href="#">About us</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- featured blog post of the week -->
+      <section id="featured">
+        <div id="featured-desc">
+          <div id="featured-date"><span>MAR 16, 2023</span></div>
+          <div id="featured-title">
+            <a href="#">
+              <h1>80% of a data scientist's time is spent organizing data.</h1>
+            </a></div>
+          <div id="featured-cta"><a href="#">Read More >></a></div>
+        </div>
+
+        <div id="featured-image"><img src="images/data02.png" alt="brainAI">
+        </div>
+        <div id="featuredTag">
+          Data Science
+        </div>
+      </section>
+
+    </header>
+
+    <h2 id="blogpostsHeader">
+      Blogposts
+    </h2>
+
+    <!-- all the new and trending blogposts goes here -->
+    <section id="blogposts">
+      <div id="blogs">
+
+        <div class="blog" data-blog="AI">
+          <div class="blogpostPicture">
+            <img src="images/data02.png" alt="">
+          </div>
+          <div class="blogTag" data-tag="AI">
+            AI
+          </div>
+          <h4>Why AI is the next big thing?</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ipsum tempora iste totam quod sed quaerat enim, necessitatibus dolores asperiores...</p><a href="">Continue Reading</a>
+        </div>
+
+        <div class="blog" data-blog="Data Science">
+          <div class="blogpostPicture">
+            <img src="images/data02.png" alt="">
+          </div>
+          <div class="blogTag" data-tag="Data Science">
+            Data Science
+          </div>
+          <h4>Data Scietists make big waves.</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo mollitia maxime soluta, sit culpa laborum asperiores vitae cumque at incidunt!...</p><a href="">Continue Reading</a>
+        </div>
+
+        <div class="blog" data-blog="Blockchain">
+          <div class="blogpostPicture">
+            <img src="images/data02.png" alt="">
+          </div>
+          <div class="blogTag" data-tag="Blockchain">
+            Blockchain
+          </div>
+          <h4>Shiba inu stocks skyrockets by over 30%...</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium voluptatem blanditiis, sapiente corporis asperiores odit architecto at velit pariatur culpa?...</p><a href="">Continue Reading</a>
+        </div>
+
+        <div class="blog" data-blog="Web dev">
+          <div class="blogpostPicture">
+            <img src="images/data02.png" alt="">
+          </div>
+          <div class="blogTag" data-tag="Web dev">
+            Web dev
+          </div>
+          <h4>How to create responsive websites.</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo officiis officia laudantium, autem dicta quia placeat modi ad doloremque error molestiae cum...</p><a href="">Continue Reading</a>
+        </div>
+
+        <div id="end">
+          <p>You've reached the end of the list.</p>
+        </div>
+      </div>
+
+      <div id="sidebar">
+        <div id="top-articles">
+          <h4>INTRO BLOGS</h4>
+          <hr>
+          <div class="sidebar-article">
+            <div class="sidebar-blogpostPicture"></div>
+            <div class="sidebar-article-desc">
+              <h5>Artificial Intelligence</h5><span class="date">Feb 10, 2023</span>
+            </div>
+          </div>
+          <div class="sidebar-article">
+            <div class="sidebar-blogpostPicture"></div>
+            <div class="sidebar-article-desc">
+              <h5>Web development</h5><span class="date">Feb 9, 2023</span>
+            </div>
+          </div>
+          <div class="sidebar-article">
+            <div class="sidebar-blogpostPicture"></div>
+            <div class="sidebar-article-desc">
+              <h5>Blockchain</h5><span class="date">Feb 5, 2023</span>
+            </div>
+          </div>
+          <div class="sidebar-article">
+            <div class="sidebar-blogpostPicture"></div>
+            <div class="sidebar-article-desc">
+              <h5>Data Science</h5><span class="date">Feb 1, 2023</span>
+            </div>
+          </div>
+        </div>
+        <div id="subscribe">
+          <hr>
+          <h4>GET WEEKLY UPDATES</h4>
+          <form><input type="text" placeholder="Enter your email..."><button type="submit">SUBSCRIBE</button></form>
+        </div>
+      </div>
+
+    </section>
+  </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+
+</html>
