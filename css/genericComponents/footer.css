@@ -1,0 +1,86 @@
+footer {
+    margin-top: 2rem;
+    background-color: #ecebeb;
+    padding: 50px 0;
+}
+
+.footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-us {
+    width: 45%;
+}
+
+.about-us h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.about-us p {
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.social-icons li {
+    list-style: none;
+    margin-right: 10px;
+}
+
+.social-icons a {
+    color: #666;
+    text-decoration: none;
+}
+
+.social-icons i {
+    font-size: 20px;
+}
+
+.social-icons a:hover {
+    color: #333;
+}
+
+.subscribe {
+    width: 45%;
+}
+
+.subscribe h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.subscribe form {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.subscribe input[type="email"] {
+    width: 70%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+    color: #666;
+}
+
+.subscribe input[type="email"]:is(:active, :focus) {
+    outline: none;
+}
+
+.subscribe button[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    background-color: #666;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.subscribe button[type="submit"]:hover {
+    background-color: #555;
+}

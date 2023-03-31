@@ -1,0 +1,9 @@
+#blogposts {
+    justify-content: center;
+}
+
+#blogposts #blogs {
+    max-height: 100vh;
+    overflow-y: scroll;
+    margin-inline: auto;
+}

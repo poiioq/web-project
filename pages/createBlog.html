@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techsquared.io</title>
+    <script src="https://kit.fontawesome.com/89492f90eb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/genericComponents/header.css">
+    <link rel="stylesheet" href="../css/genericComponents/featured.css">
+    <link rel="stylesheet" href="../css/genericComponents/blogpostList.css">
+    <link rel="stylesheet" href="../css/genericComponents/footer.css">
+    <link rel="stylesheet" href="../css/createBlog.css">
+
+</head>
+
+<body>
+
+    <!-- outer container for the homepage -->
+    <div class="container">
+
+        <!-- header section of the homepage goes here
+    contains the navbar and featured article -->
+        <header>
+
+            <!-- nav section -->
+            <nav>
+                <div id="companyLogo">
+                    <a href="/index.html" target="_self"><img src="/svg/Techsquared.svg" alt="techsquaredLogo"></a>
+                </div>
+
+                <div id="navtabs">
+                    <ul>
+                        <li><a href="./createBlog.html">Publish</a></li>
+                        <li><a href="#footer">About</a></li>
+                        <li><a href="./admin/getBlogs.html">Admin</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+        </header>
+
+        <!-- form container goes here -->
+        <div class="form-container">
+            <div id="editBlogPost">
+                <form id="blogPost">
+
+                    <fieldset id="postInput">
+                        <legend>Create a blog</legend>
+                        <div class="input-container">
+                            <input id="title" name="title" type="text" placeholder="Blog Title..." maxlength="15"
+                                spellcheck="false" required>
+                        </div>
+
+                        <div class="input-container">
+                            <input id="author" name="author" type="text" placeholder="Blog Author..." maxlength="15"
+                                spellcheck="false" required>
+                        </div>
+
+                        <!-- Inputs for tag attributed to blog -->
+                        <div class="input-container">
+                            <label for="tagGroup">Tag your blog</label>
+                            <br>
+
+                            <input class="tags" id="tagDataScience" name="tag" type="radio" value="dataScience" checked>
+                            <label for="tagDataScience">Data Science</label>
+                            <br>
+
+                            <input class="tags" name="tag" id="tagArtificialIntelligence" type="radio" value="ai">
+                            <label for="tagArtificialIntelligence">Artficial Intelligence</label>
+                            <br>
+
+                            <input class="tags" name="tag" id="tagWebDevelopment" type="radio" value="webDev">
+                            <label for="tagWebDevelopment">Web Development</label>
+                            <br>
+
+                            <input class="tags" name="tag" id="tagBlockchain" type="radio" value="blockchain">
+                            <label for="tagBlockchain">Blockchain</label>
+                        </div>
+
+                        <div class="input-container">
+                            <label for="content">Content</label>
+                            <br>
+                            <textarea id="content" name="content" spellcheck="false" required></textarea>
+                        </div>
+                    </fieldset>
+
+                    <input class="button" type="button" id="publish" value="PUBLISH">
+                    <input class="button" type="button" id="preview" value="PREVIEW">
+                    <input class="button" type="reset" id="reset" value="RESET">
+                </form>
+            </div>
+
+            <div class="spacer"></div>
+
+            <div id="previewBlogpost">
+                <h2 id="previewHeader">Preview</h2>
+                <div id="blogPreview">
+                    <h3 id="previewHeading"></h3>
+                    <small id="previewAuthor"></small>
+                    <small id="previewDate"></small>
+                    <p id="previewContent">
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- footer goes here -->
+        <footer id="footer">
+            <div class="footer">
+                <div class="about-us">
+                    <h3>About Us</h3>
+                    <p>Techsquared.io is the go-to destination for tech enthusiasts, providing in-depth analysis,
+                        cutting-edge insights, and expert commentary on the latest trends and innovations in the
+                        industry.</p>
+                    <ul class="social-icons">
+                        <li><a target="_blank" href="https://github.com/JaykumarPatel1998/group-project"><i
+                                    class="fa fa-github"> | source code</i></a></li>
+                    </ul>
+                </div>
+                <div class="subscribe">
+                    <h3>Subscribe to our Newsletter</h3>
+                    <form>
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+</body>
+<script type="module" src="/scripts/InsertBlog.js"></script>
+
+</html>
