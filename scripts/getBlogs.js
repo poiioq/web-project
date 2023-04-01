@@ -1,10 +1,16 @@
 import { app, db } from "/scripts/firebaseConfig.js";
 import { set, get, update, remove, ref, child } from "https://www.gstatic.com/firebasejs/9.19.0/firebase-database.js"
 
+
+const params = new URLSearchParams(window.location.search);
+const tag = params.get('tag');
+const title = params.get('title');
+
 const $ = (id) => {
     return document.getElementById(id);
 }
 
+let divContent = $('blogContentDiv')
 // fetching records to display on the home page from the firebase
 let featured = {};
 let trending = [];
@@ -56,6 +62,7 @@ const setFeaturedblogData = () => {
     else {
         dynamicStylingChange(tag, "Data science")
     }
+    divContent.innerHTML = featured.blogContent
 }
 
 const setTrendingData = () => {
@@ -101,10 +108,10 @@ const findData = async () => {
     const snapshot = await get(child(dbref, "Techsquared/"))
     const obj = snapshot.val();
     for (let key in obj) {
-        if (obj[key].featured) {
+        if (obj[key].blogTitle == title) {
             featured = obj[key]
         }
-        if (obj[key].trending) {
+        if (obj[key].blogTag == tag) {
             trending.push(obj[key])
         }
     }

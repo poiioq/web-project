@@ -24,7 +24,6 @@
 .blog {
     position: relative;
     padding: 1rem;
-    cursor: pointer;
     transition: box-shadow 0.25s ease-in-out;
 }
 
@@ -70,9 +69,14 @@
 }
 
 .blog a {
-    color: #2ccef2;
+    color: #296db0;
     letter-spacing: 0.5px;
-    text-decoration: underline;
+    font-size: medium;
+    text-decoration: none;
+}
+
+.blog a:hover {
+    color: #353738;
 }
 
 .blogTag {

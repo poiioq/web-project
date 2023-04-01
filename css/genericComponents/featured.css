@@ -108,3 +108,13 @@
     opacity: 0.8;
     clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
 }
+
+#blogContentDiv {
+    font-size: 1.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 2rem;
+    padding: 3rem;
+    box-shadow: var(--box-shadow-generic);
+    line-height: 3rem;
+    word-spacing: 0.8rem;
+}

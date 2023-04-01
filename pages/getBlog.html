@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Techsquared.io</title>
+  <script src="https://kit.fontawesome.com/89492f90eb.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/genericComponents/header.css">
+  <link rel="stylesheet" href="/css/genericComponents/featured.css">
+  <link rel="stylesheet" href="/css/genericComponents/blogpostList.css">
+  <link rel="stylesheet" href="/css/genericComponents/footer.css">
+</head>
+
+<body>
+
+  <!-- outer container for the homepage -->
+  <div class="container">
+
+    <!-- header section of the homepage goes here
+    contains the navbar and featured article -->
+    <header>
+
+      <!-- nav section -->
+      <nav>
+        <div id="companyLogo">
+          <a href="/index.html" target="_self"><img src="/svg/Techsquared.svg" alt="techsquaredLogo"></a>
+        </div>
+
+        <div id="navtabs">
+          <ul>
+            <li><a href="#featureHeading">Featured</a></li>
+            <li><a href="./pages/createBlog.html">Publish</a></li>
+            <li><a href="#footer">About</a></li>
+            <li><a href="./pages/admin/getBlogs.html">Admin</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- featured blog post of the week -->
+      <section id="featured">
+        <div id="featured-desc">
+          <div id="featured-date"><span>MAR 16, 2023</span></div>
+          <div id="featured-title">
+            <a href="#">
+              <h1>80% of a data scientist's time is spent organizing data.</h1>
+            </a>
+          </div>
+        </div>
+
+        <div id="featured-image" data-feature-tag="ai"><img src="/images/data02.png" alt="brainAI">
+        </div>
+
+        <div id="featuredTag">
+          Data Science
+        </div>
+      </section>
+
+    </header>
+
+    <!-- the blog content goes here -->
+    <p id="blogContentDiv">
+        
+    </p>
+
+    <h2 class="blogpostsHeader">
+      #Similar Blogs
+    </h2>
+
+    <!-- all the new and trending blogposts goes here -->
+    <section id="blogposts">
+      <div id="blogs">
+        <div id="end">
+          <p>You've reached the end of the list.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer goes here -->
+    <footer id="footer">
+      <div class="footer">
+        <div class="about-us">
+          <h3>About Us</h3>
+          <p>Techsquared.io is the go-to destination for tech enthusiasts, providing in-depth analysis, cutting-edge insights, and expert commentary on the latest trends and innovations in the industry.</p>
+          <ul class="social-icons">
+            <li><a target="_blank" href="https://github.com/JaykumarPatel1998/group-project"><i class="fa fa-github"> | source code</i></a></li>
+          </ul>
+        </div>
+        <div class="subscribe">
+          <h3>Subscribe to our Newsletter</h3>
+          <form>
+            <input type="email" placeholder="Enter your email">
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+</body>
+<script type="module" src="/scripts/getBlogs.js"></script>
+
+</html>
