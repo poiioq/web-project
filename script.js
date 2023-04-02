@@ -9,18 +9,23 @@ const $ = (id) => {
 let featured = {};
 let trending = [];
 
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
 const returnImagePath = (tag) => {
+    const randomint = getRandomInt(1,4)
     if (tag == 'ai') {
-        return "/images/ai01.png"
+        return `/images/ai0${randomint}.jpg`
     }
     else if (tag == 'webDev') {
-        return "/images/web03.png"
+        return `/images/webDev0${randomint}.jpg`
     }
     else if (tag == 'blockchain') {
-        return "/images/blockchain04.png"
+        return `/images/blockchain0${randomint}.jpg`
     }
     else {
-        return "/images/data02.png"
+        return `/images/data0${randomint}.jpg`
     }
 }
 

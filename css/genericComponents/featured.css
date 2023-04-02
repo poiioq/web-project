@@ -69,6 +69,12 @@
 #featured-image {
     right: 0;
     position: absolute;
+    text-align: end;
+}
+
+#featured-image img {
+    width: 70%;
+    height: 70%;
 }
 
 #featured-image[data-feature-tag="ai"]:after {
