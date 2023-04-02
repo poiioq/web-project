@@ -6,7 +6,6 @@ const $ = (id) => {
 }
 
 // fetching records to display on the home page from the firebase
-let featured = {};
 let trending = [];
 
 function getRandomInt(min, max) {
@@ -26,40 +25,6 @@ const returnImagePath = (tag) => {
     }
     else {
         return `/images/data0${randomint}.jpg`
-    }
-}
-
-const setFeaturedblogData = () => {
-    $('featured-date').querySelector('span').innerHTML = featured.timestamp;
-    let heading = $('featured-title').querySelector('h1');
-
-    heading.innerHTML = featured.blogTitle;
-    const tag = featured.blogTag;
-
-    let image = document.querySelector('#featured-image');
-    image.setAttribute('data-feature-tag', tag)
-
-    let featuredTag = $('featuredTag')
-
-    const dynamicStylingChange = (tagName, displayName) => {
-        const color = `var(--accent-color-${tagName})`
-        heading.style.backgroundColor = color
-        featuredTag.style.backgroundColor = color
-        featuredTag.innerHTML = displayName
-        image.querySelector('img').setAttribute('src', `${returnImagePath(tagName)}`)
-    }
-
-    if (tag == 'ai') {
-        dynamicStylingChange(tag, "AI")
-    }
-    else if (tag == 'webDev') {
-        dynamicStylingChange(tag, "Web dev")
-    }
-    else if (tag == 'blockchain') {
-        dynamicStylingChange(tag, "Blockchain")
-    }
-    else {
-        dynamicStylingChange(tag, "Data science")
     }
 }
 
@@ -94,7 +59,8 @@ const setTrendingData = () => {
                 </div>
                 <h4>${item.blogTitle}</h4>
                 <p>${item.blogContent.substring(0, 200) + "..."}</p>
-                <a href="/pages/getBlog.html?tag=${item.blogTag}&title=${item.blogTitle}">Continue Reading</a>
+                <button class="deleteBlog" type="button">Delete blog</button>
+                <button class="updateBlog" type="button">Update blog</button>
             </div>
             ` + "\n"
     }
@@ -112,15 +78,27 @@ const findData = async () => {
     const snapshot = await get(child(dbref, "Techsquared/"))
     const obj = snapshot.val();
     for (let key in obj) {
-        if (obj[key].featured) {
-            featured = obj[key]
-        }
-        if (obj[key].trending) {
-            trending.push(obj[key])
-        }
+        trending.push(obj[key])
     }
-    setFeaturedblogData();
     setTrendingData();
+
+    document.querySelectorAll(".deleteBlog").forEach((element) => {
+        // console.log(element.previousElementSibling.previousElementSibling.innerHTML)
+        const title = element.previousElementSibling.previousElementSibling.innerHTML;
+        element.addEventListener('click', async () => {
+            // console.log(title)
+            remove(child(dbref, "Techsquared/" + title))
+                .then(() => {
+                    alert('Data deleted successfully');
+                    location.reload(true);
+                })
+                .catch(err => {
+                    console.error(err);
+                    alert('Error deleting data, check console for error');
+                })
+
+        })
+    })
 }
 
 findData();

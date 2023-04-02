@@ -105,6 +105,12 @@ const setTrendingData = () => {
             </div>
             ` + "\n"
     }
+    addedHtml +=
+        `
+    <div id="end">
+          <p>You've reached the end of the list.</p>
+    </div>
+    `
     $('blogs').innerHTML = addedHtml;
 }
 
