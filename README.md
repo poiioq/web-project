@@ -14,8 +14,7 @@ Techsquared.io is a platform that displays blogs related to four categories: Web
 
 ## Landing Page
 
-![Techsquared.io Landing Page](![landingPage01](https://user-images.githubusercontent.com/85047980/229383415-f358ab64-190b-47c1-9c1a-f59861545cac.png)
-)
+![Techsquared.io Landing Page](https://user-images.githubusercontent.com/85047980/229383415-f358ab64-190b-47c1-9c1a-f59861545cac.png)
 
 ## Technologies Used
 
