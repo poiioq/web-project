@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/css/genericComponents/blogpostList.css">
     <link rel="stylesheet" href="/css/genericComponents/footer.css">
     <link rel="stylesheet" href="/css/createBlog.css">
+    <link rel="stylesheet" href="/css/updateBlog.css">
 </head>
 
 <body>
@@ -33,9 +34,9 @@
 
                 <div id="navtabs">
                     <ul>
-                        <li><a href="./createBlog.html">Publish</a></li>
+                        <li><a href="/pages/createBlog.html">Publish</a></li>
                         <li><a href="#footer">About</a></li>
-                        <li><a href="./admin/getBlogs.html">Admin</a></li>
+                        <li><a href="/pages/admin/getBlogs.html">Admin</a></li>
                     </ul>
                 </div>
             </nav>
@@ -48,14 +49,14 @@
                 <form id="blogPost">
 
                     <fieldset id="postInput">
-                        <legend>Create a blog</legend>
+                        <legend>Update blog</legend>
                         <div class="input-container">
-                            <input id="title" name="title" type="text" placeholder="Blog Title..." minlength="15" maxlength="40"
-                                spellcheck="false" required>
+                            <input id="title" name="title" type="text" placeholder="Blog Title..." maxlength="15"
+                                spellcheck="false" required disabled>
                         </div>
 
                         <div class="input-container">
-                            <input id="author" name="author" type="text" placeholder="Blog Author..." maxlength="30"
+                            <input id="author" name="author" type="text" placeholder="Blog Author..." maxlength="15"
                                 spellcheck="false" required>
                         </div>
 
@@ -78,6 +79,20 @@
 
                             <input class="tags" name="tag" id="tagBlockchain" type="radio" value="blockchain">
                             <label for="tagBlockchain">Blockchain</label>
+                        </div>
+
+                        <div id="featureSwitch">
+                            <label>
+                                <input class="mySwitch" type="checkbox" name="my-switch">
+                                Featured post
+                            </label>
+                        </div>
+
+                        <div id="trendingSwitch">
+                            <label>
+                                <input class="mySwitch" type="checkbox" name="my-switch">
+                                Trending post
+                            </label>
                         </div>
 
                         <div class="input-container">
@@ -133,6 +148,6 @@
 
     </div>
 </body>
-<script type="module" src="/scripts/InsertBlog.js"></script>
+<script type="module" src="/scripts/UpdateBlog.js"></script>
 
 </html>

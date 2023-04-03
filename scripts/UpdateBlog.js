@@ -1,7 +1,36 @@
 // Import the functions you need from the SDKs you need
 import { app, db } from "./firebaseConfig.js";
-import { set, get, update, remove, ref, child }
-    from "https://www.gstatic.com/firebasejs/9.19.0/firebase-database.js"
+import { set, get, update, remove, ref, child } from "https://www.gstatic.com/firebasejs/9.19.0/firebase-database.js"
+
+const params = new URLSearchParams(window.location.search);
+const blogTitle = params.get('title');
+const featuredFlag = params.get('featuredFlag');
+
+window.onload = async () => {
+    if (featuredFlag === 'true') {
+        alert('If you turn off feature flag on this blog, make sure to assign it to a different blog');
+    }
+    const dbref = ref(db);
+    const snapshot = await get(child(dbref, "Techsquared/" + blogTitle))
+    const obj = snapshot.val();
+    updateInputs()
+    title.value = obj.blogTitle
+    author.value = obj.blogAuthor
+    content.value = obj.blogContent
+
+    if (obj.featured) {
+        document.querySelector('#featureSwitch input.mySwitch').checked = true;
+    }
+    if (obj.trending) {
+        document.querySelector('#trendingSwitch input.mySwitch').checked = true;
+    }
+
+    for (const tagelement of tags)  {
+        if (tagelement.value === obj.blogTag) {
+            tagelement.checked = true;
+        }
+    }
+}
 
 
 // Application logic goes here
@@ -94,25 +123,19 @@ const insertData = () => {
             month: 'long',
             day: 'numeric'
         }),
-        featured: false,
-        trending: false
+        featured: document.querySelector('#featureSwitch input.mySwitch').checked,
+        trending: document.querySelector('#trendingSwitch input.mySwitch').checked
     };
-    set(ref(db, "Techsquared/" + blogPost.blogTitle),
+    update(ref(db, "Techsquared/" + blogPost.blogTitle),
         {...blogPost})
         .then(() => {
-            alert('Data inserted successfully');
+            alert('Data updated successfully');
             window.location.reload(true);
         })
         .catch(err => {
             console.error(err);
-            alert('Error inserting data, check console for error');
+            alert('Error updating data, check console for error');
         })
 }
 
 submitButton.addEventListener('click', insertData)
-
-
-
-
-
-

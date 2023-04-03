@@ -54,13 +54,18 @@ const setTrendingData = () => {
                 <div class="blogpostPicture">
                   <img src=${returnImagePath(item.blogTag)} alt="">
                 </div>
+                <div class="blogFeaturedOrTrending" style="display:${item.featured || item.trending ? 'block' : 'none'};">
+                  ${
+                    item.featured ? '#featured' : '#trending'
+                  }
+                </div>
                 <div class="blogTag" data-tag=${returnDisplayValue(item.blogTag)}>
                   ${returnDisplayValue(item.blogTag)}
                 </div>
                 <h4>${item.blogTitle}</h4>
                 <p>${item.blogContent.substring(0, 200) + "..."}</p>
                 <button class="deleteBlog" type="button">Delete blog</button>
-                <button class="updateBlog" type="button">Update blog</button>
+                <button class="updateBlog" type="button"><a href="/pages/admin/updateBlog.html?title=${item.blogTitle}&featuredFlag=${item.featured}" style="font-weight:inherit;font-size:0.75rem">Update blog</a></button>
             </div>
             ` + "\n"
     }

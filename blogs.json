@@ -159,7 +159,7 @@
             "blogTag": "webDev",
             "blogContent": "Web accessibility is the practice of designing and developing websites that can be used by people with disabilities. In this post, we'll cover some best practices for making your websites more accessible and inclusive.",
             "timestamp": "April 2, 2023",
-            "featured": true,
+            "featured": false,
             "trending": false
           },
           "Modern CSS Layout Techniques": {
@@ -168,7 +168,7 @@
             "blogTag": "webDev",
             "blogContent": "CSS has come a long way in recent years, and there are now many powerful layout techniques available to web developers. In this post, we'll cover some of the most popular modern CSS layout techniques and show you how to use them in your own projects.",
             "timestamp": "April 1, 2023",
-            "featured": true,
+            "featured": false,
             "trending": true
           },
           "Using React for Web Development": {
@@ -195,7 +195,7 @@
             "blogTag": "webDev",
             "blogContent": "The web is constantly evolving, and so is web development. In this post, we'll explore some of the latest trends and technologies shaping the future of web development, including PWAs, web components, and serverless architecture.",
             "timestamp": "March 29, 2023",
-            "featured": true,
+            "featured": false,
             "trending": true
           }
     }

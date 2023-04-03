@@ -32,6 +32,9 @@ const returnImagePath = (tag) => {
 const setFeaturedblogData = () => {
     $('featured-date').querySelector('span').innerHTML = featured.timestamp;
     let heading = $('featured-title').querySelector('h1');
+    let anchor = $('featured-cta').querySelector('a');
+
+    anchor.setAttribute('href', `/pages/getBlog.html?tag=${featured.blogTag}&title=${featured.blogTitle}`);
 
     heading.innerHTML = featured.blogTitle;
     const tag = featured.blogTag;
