@@ -10,7 +10,7 @@ nav {
 #companyLogo {
   cursor: pointer;
   text-align: center;
-  box-shadow: var(--box-shadow-generic)
+  box-shadow: var(--box-shadow-generic);
 }
 
 #companyLogo img {
@@ -47,4 +47,25 @@ nav {
 
 #navtabs li a:hover:after {
   width: 100%;
+}
+
+@media (max-width: 760px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+  }
+
+  #navtabs ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #navtabs li {
+    padding: 10px;
+    font-size: 1.5rem;
+  }
 }

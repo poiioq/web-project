@@ -17,10 +17,10 @@ let trending = [];
 
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
+}
 
 const returnImagePath = (tag) => {
-    const randomint = getRandomInt(1,4)
+    const randomint = getRandomInt(1, 4)
     if (tag == 'ai') {
         return `/images/ai0${randomint}.jpg`
     }
@@ -94,7 +94,7 @@ const setTrendingData = () => {
             `
             <div class="blog" data-blog=${returnDisplayValue(item.blogTag)}>
                 <div class="blogpostPicture">
-                  <img src=${returnImagePath(item.blogTag)} alt="">
+                  <img src=${returnImagePath(item.blogTag)} alt="" loading="lazy">
                 </div>
                 <div class="blogTag" data-tag=${returnDisplayValue(item.blogTag)}>
                   ${returnDisplayValue(item.blogTag)}

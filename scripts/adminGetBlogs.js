@@ -52,7 +52,7 @@ const setTrendingData = () => {
             `
             <div class="blog" data-blog=${returnDisplayValue(item.blogTag)}>
                 <div class="blogpostPicture">
-                  <img src=${returnImagePath(item.blogTag)} alt="">
+                  <img src=${returnImagePath(item.blogTag)} alt="" loading="lazy">
                 </div>
                 <div class="blogFeaturedOrTrending" style="display:${item.featured || item.trending ? 'block' : 'none'};">
                   ${
