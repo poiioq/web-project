@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Techsquared.io</title>
+	<link rel="stylesheet" type="text/css" href="../css/formnew.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="../form.js"></script>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+	<script src="https://kit.fontawesome.com/89492f90eb.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="../css/styles.css">
+	<link rel="stylesheet" href="../css/genericComponents/header.css">
+	<link rel="stylesheet" href="../css/genericComponents/featured.css">
+	<link rel="stylesheet" href="../css/genericComponents/blogpostList.css">
+	<link rel="stylesheet" href="../css/genericComponents/footer.css">
+    
+
+</head>
+<body>
+	<div class="container">
+
+	<header>
+		<nav>
+			<div id="companyLogo">
+			  <a href="../index.html" target="_self"><img src="../svg/Techsquared.svg" alt="techsquaredLogo"></a>
+			</div>
+	
+			<div id="navtabs">
+			  <ul>
+				<li><a href="/pages/createBlog.html">Publish</a></li>
+				<li><a href="#footer">About</a></li>
+				<li><a href="/pages/getBlog.html">Admin</a></li>
+				<li><a href="/pages/Form.html">FeedBack</a></li>
+			  </ul>
+			</div>
+		  </nav>
+	</header>
+	<h1>User Feedback Form</h1>
+	<form action="#" method="post" id="contactForm">
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name" required><br><br>
+		
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email" required><br><br>
+		
+		<label for="feedback">Feedback:</label>
+		<textarea id="feedback" name="feedback" rows="5" cols="30" required></textarea><br><br>
+		
+		<label for="rating">Rating:</label>
+		<select id="rating" name="rating" required>
+			<option value="">Please select a rating</option>
+			<option value="5">5 - Excellent</option>
+			<option value="4">4 - Good</option>
+			<option value="3">3 - Average</option>
+			<option value="2">2 - Poor</option>
+			<option value="1">1 - Very poor</option>
+		</select><br><br>
+		
+		<input type="submit" value="Submit" id="submit">
+		<input type="reset" value="Reset">
+	</form>
+	<footer id="footer">
+		<div class="footer">
+		  <div class="about-us">
+			<h3>About Us</h3>
+			<p>Techsquared.io is the go-to destination for tech enthusiasts, providing in-depth analysis, cutting-edge insights, and expert commentary on the latest trends and innovations in the industry.</p>
+			<ul class="social-icons">
+			  <li><a target="_blank" href="https://github.com/JaykumarPatel1998/group-project"><i class="fa fa-github"> | source code</i></a></li>
+			</ul>
+		  </div>
+		  <div class="subscribe">
+			<h3>Subscribe to our Newsletter</h3>
+			<form>
+			  <input type="email" placeholder="Enter your email">
+			  <button type="submit">Subscribe</button>
+			</form>
+		  </div>
+		</div>
+	  </footer>
+	  <div class="container">
+
+</body>
+</html>
+

@@ -10,9 +10,13 @@
     transition: scale 0.10s ease-in-out;
 }
 
+.updateBlog > a {
+    color: black !important;
+}
+
 .deleteBlog:is(:hover), .updateBlog:is(:hover) {
     background: #888787;
-    color: white;
+    color: white !important;
     scale: 1.2;
 }
 
