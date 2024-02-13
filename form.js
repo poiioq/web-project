@@ -14,11 +14,6 @@ const firebaseConfig = {
   var $ = function (id) { 
     return document.getElementById(id); 
 };
-  
-
-
-
-  
  
   function submitForm(e){
     e.preventDefault();
