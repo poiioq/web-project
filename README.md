@@ -1,5 +1,5 @@
 # Techsquared.io
-
+https://main.d2uo5jictye1hh.amplifyapp.com/
 This is the official repository for Techsquared.io, a popular technical website.
 
 ## Overview
