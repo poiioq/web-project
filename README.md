@@ -1,6 +1,6 @@
 # Techsquared.io
 
-This is the official repository for Techsquared.io, a popular technical blogging website. The project was developed by students of Humber College - Jaykumar Patel, Xiaoxing Bian, and Akshay R.
+This is the official repository for Techsquared.io, a popular technical website.
 
 ## Overview
 
